@@ -1,26 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Appointment Form</title>
-    <script src="form.js"></script>
-</head>
-<body>
-    <form id="appointment-form" action="/submit-app" method="post">
+    <link rel="stylesheet" href="styles/form.css" />
+    <script src="js/form.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <form id="appointment-form" action="/submit-app" method="post">
         <fieldset>
-            <label for="fname">First Name:</label>
-            <input type="text" id="fname" name="fname" />
-            <label for="lname">Last Name:</label>
-            <input type="text" id="lname" name="lname" />
-            
-            <label for="date">Date:</label>
-            <input type="date" />
+          <label for="fname">First Name:</label>
+          <span class="err" id="fname-err">First name is required</span>
+          <input type="text" id="fname" name="fname" />
+          <label for="lname">Last Name:</label>
+          <span class="err" id="lname-err">Last name is required</span>
+          <input type="text" id="lname" name="lname" />
 
-            <label for="time">Time:</label>
-            <input type="time" />
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" />
+
+          <label for="time">Time:</label>
+          <input type="time" id="time" name="time" />
         </fieldset>
-        <button type="submit" id="appointment-form"></button>
-    </form>
-</body>
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
 </html>

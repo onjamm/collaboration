@@ -1,0 +1,31 @@
+body {
+  font-size: 1.5rem;
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+}
+
+form {
+  width: 40vw;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+button[type="submit"] {
+  width: 100%;
+}
+.err {
+  color: red;
+  display: none;
+}
